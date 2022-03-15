@@ -18,15 +18,15 @@ terraform {
 
 
 provider "aws" {
-  region = "eu-west-1
+  region = "eu-west-1"
   default_tags {
     tags = {
-      module      = "ci-test
+      module      = "ci-test"
       provisioner = "terraform"
     }
   }
 }
 
 resource "aws_ecs_cluster" "fargate_cluster" {
-  name               = "test-ci-dummy-resource"
+  name = "test-ci-dummy-resource"
 }
