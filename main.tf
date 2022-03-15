@@ -11,8 +11,12 @@ terraform {
 }
 
 terraform {
-  backend "local" {
-    path = ".terraform/state/terraform.tfstate"
+  cloud {
+    organization = "PbstckTest"
+
+    workspaces {
+      name = "vast-test"
+    }
   }
 }
 
